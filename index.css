@@ -1,0 +1,73 @@
+
+table {
+    border-collapse: collapse;
+    font-size: 15px;
+    border:1px solid #BBBBBB;
+    overflow: hidden;
+}
+
+th {
+    color: #555555;
+    position: relative;
+    padding: 5px;
+    background-color: #FFFFFF;
+}
+
+tr {
+    position: relative;
+}
+
+img {
+    width: 100px;
+}
+
+tbody tr:hover {
+    background-color: #CCCCCC;
+}
+
+td {
+    position: relative;
+    text-align: center;
+    padding: 5px;
+    height: 40px;
+}
+
+td:hover::after {
+    content: ""; 
+    position: absolute;
+    background-color: #CCCCCC;
+    left: 0;
+    top: -5000px;
+    height: 10000px;
+    width: 100%;
+    z-index: -1;
+}
+
+tbody tr:nth-child(odd)::after {
+    content: ""; 
+    position: absolute;
+    background-color: #EEEEEE;
+    left: -5000px;
+    top: 0;
+    width: 10000px;
+    height: 100%;
+    z-index: -2;
+}
+
+button {
+    display: none;
+}
+
+input[type="tel"]:valid + input[type="email"]:valid + button{
+    display: block;
+}
+
+form {
+    margin-left: 150px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+input[type="text"] {
+    margin: 20px;
+}
