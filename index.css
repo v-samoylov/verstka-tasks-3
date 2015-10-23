@@ -22,7 +22,7 @@ tbody tr:hover {
     background-color: #ccc;
 }
 
-tbody tr:nth-child(odd) td:first-child::after {
+tbody tr:nth-child(odd) td:first-child::before {
     content: "";
     position: absolute;
     background-color: #eee;
