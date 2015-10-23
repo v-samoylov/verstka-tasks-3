@@ -2,27 +2,35 @@
 table {
     border-collapse: collapse;
     font-size: 15px;
-    border:1px solid #BBBBBB;
+    border: 1px solid #bbb;
     overflow: hidden;
 }
 
 th {
-    color: #555555;
+    color: #555;
     position: relative;
     padding: 5px;
-    background-color: #FFFFFF;
+    
 }
 
-tr {
+tbody tr {
     position: relative;
-}
-
-img {
-    width: 100px;
+    display: none;
 }
 
 tbody tr:hover {
-    background-color: #CCCCCC;
+    background-color: #ccc;
+}
+
+tbody tr:nth-child(odd) td:first-child::after {
+    content: "";
+    position: absolute;
+    background-color: #eee;
+    left: -5000px;
+    top: 0;
+    width: 10000px;
+    height: 100%;
+    z-index: -2;
 }
 
 td {
@@ -35,7 +43,7 @@ td {
 td:hover::after {
     content: ""; 
     position: absolute;
-    background-color: #CCCCCC;
+    background-color: #ccc;
     left: 0;
     top: -5000px;
     height: 10000px;
@@ -43,31 +51,81 @@ td:hover::after {
     z-index: -1;
 }
 
-tbody tr:nth-child(odd)::after {
-    content: ""; 
-    position: absolute;
-    background-color: #EEEEEE;
-    left: -5000px;
-    top: 0;
-    width: 10000px;
-    height: 100%;
-    z-index: -2;
+img {
+    width: 100px;
 }
 
 button {
     display: none;
 }
 
-input[type="tel"]:valid + input[type="email"]:valid + button{
-    display: block;
-}
-
 form {
-    margin-left: 150px;
+    margin-left: 190px;
     margin-top: 30px;
     margin-bottom: 50px;
 }
 
+input[type="tel"]:valid + br + input[type="email"]:valid + button{
+    display: block;
+}
+
 input[type="text"] {
     margin: 20px;
+}
+
+input[type="email"] {
+    margin-left: 21px;
+    margin-bottom: 5px;
+}
+
+input[value="Москва"] ~ input + table > tbody > tr:not(.moscow){
+    display: none !important;
+}
+
+input[value="Рига"] ~ input + table > tbody > tr:not(.riga){
+    display: none !important;
+}
+
+input[value="Новосибирск"] ~ input + table > tbody > tr:not(.novosibirsk){
+    display: none !important;
+}
+
+input[value="Екатеринбург"] ~ input + table > tbody > tr:not(.yekaterinburg){
+    display: none !important;
+}
+
+input[value="Хельсинки"] ~ input + table > tbody > tr:not(.helsinki){
+    display: none !important;
+}
+
+input[value="Санкт-Петербург"] ~ input + table > tbody > tr:not(.spetersburg){
+    display: none !important;
+}
+
+input[name="A"]:checked ~ input + table > tbody > tr.a{
+    display: table-row;
+}
+
+input[name="B"]:checked ~ input + table > tbody > tr.b{
+    display: table-row;
+}
+
+input[name="C"]:checked ~ input + table > tbody > tr.c{
+    display: table-row;
+}
+
+input[name="D"]:checked ~ input + table > tbody > tr.d{
+    display: table-row;
+}
+
+input[name="E"]:checked ~ input + table > tbody > tr.e{
+    display: table-row;
+}
+
+input[name="F"]:checked + table > tbody > tr.f{
+    display: table-row;
+}
+
+div {
+    margin-bottom: -8px;
 }
