@@ -65,7 +65,7 @@ form {
     margin-bottom: 50px;
 }
 
-input[type="tel"]:valid + br + input[type="email"]:valid + button{
+input[type="tel"]:valid + br + input[type="email"]:valid + button {
     display: block;
 }
 
@@ -78,51 +78,51 @@ input[type="email"] {
     margin-bottom: 5px;
 }
 
-input[value="Москва"] ~ input + table > tbody > tr:not(.moscow){
+input[value="Москва"] ~ table > tbody > tr:not(.moscow){
     display: none !important;
 }
 
-input[value="Рига"] ~ input + table > tbody > tr:not(.riga){
+input[value="Рига"] ~ table > tbody > tr:not(.riga){
     display: none !important;
 }
 
-input[value="Новосибирск"] ~ input + table > tbody > tr:not(.novosibirsk){
+input[value="Новосибирск"] ~ table > tbody > tr:not(.novosibirsk){
     display: none !important;
 }
 
-input[value="Екатеринбург"] ~ input + table > tbody > tr:not(.yekaterinburg){
+input[value="Екатеринбург"] ~ table > tbody > tr:not(.yekaterinburg){
     display: none !important;
 }
 
-input[value="Хельсинки"] ~ input + table > tbody > tr:not(.helsinki){
+input[value="Хельсинки"] ~ table > tbody > tr:not(.helsinki){
     display: none !important;
 }
 
-input[value="Санкт-Петербург"] ~ input + table > tbody > tr:not(.spetersburg){
+input[value="Санкт-Петербург"] ~ table > tbody > tr:not(.spetersburg){
     display: none !important;
 }
 
-input[name="A"]:checked ~ input + table > tbody > tr.a{
+input[name="A"]:checked ~ table .a{
     display: table-row;
 }
 
-input[name="B"]:checked ~ input + table > tbody > tr.b{
+input[name="B"]:checked ~ table .b{
     display: table-row;
 }
 
-input[name="C"]:checked ~ input + table > tbody > tr.c{
+input[name="C"]:checked ~ table .c{
     display: table-row;
 }
 
-input[name="D"]:checked ~ input + table > tbody > tr.d{
+input[name="D"]:checked ~ table .d{
     display: table-row;
 }
 
-input[name="E"]:checked ~ input + table > tbody > tr.e{
+input[name="E"]:checked ~ table .e{
     display: table-row;
 }
 
-input[name="F"]:checked + table > tbody > tr.f{
+input[name="F"]:checked + table .f{
     display: table-row;
 }
 
