@@ -10,7 +10,6 @@ th {
     color: #555;
     position: relative;
     padding: 5px;
-    
 }
 
 tbody tr {
@@ -41,7 +40,7 @@ td {
 }
 
 td:hover::after {
-    content: ""; 
+    content: "";
     position: absolute;
     background-color: #ccc;
     left: 0;
@@ -57,6 +56,8 @@ img {
 
 button {
     display: none;
+    margin-left: 50px;
+    margin-top: 20px;
 }
 
 form {
@@ -65,7 +66,7 @@ form {
     margin-bottom: 50px;
 }
 
-input[type="tel"]:valid + br + input[type="email"]:valid + button {
+input[type="tel"]:valid ~ input[type="email"]:valid ~ button {
     display: block;
 }
 
@@ -78,54 +79,28 @@ input[type="email"] {
     margin-bottom: 5px;
 }
 
-input[value="Москва"] ~ table > tbody > tr:not(.moscow){
+input[value="Москва"] ~ table > tbody > tr:not(.moscow),
+input[value="Новосибирск"] ~ table > tbody > tr:not(.novosibirsk),
+input[value="Екатеринбург"] ~ table > tbody > tr:not(.yekaterinburg),
+input[value="Хельсинки"] ~ table > tbody > tr:not(.helsinki),
+input[value="Санкт-Петербург"] ~ table > tbody > tr:not(.spetersburg),
+input[value="Рига"] ~ table > tbody > tr:not(.riga)
+{
     display: none !important;
 }
 
-input[value="Рига"] ~ table > tbody > tr:not(.riga){
-    display: none !important;
-}
-
-input[value="Новосибирск"] ~ table > tbody > tr:not(.novosibirsk){
-    display: none !important;
-}
-
-input[value="Екатеринбург"] ~ table > tbody > tr:not(.yekaterinburg){
-    display: none !important;
-}
-
-input[value="Хельсинки"] ~ table > tbody > tr:not(.helsinki){
-    display: none !important;
-}
-
-input[value="Санкт-Петербург"] ~ table > tbody > tr:not(.spetersburg){
-    display: none !important;
-}
-
-input[name="A"]:checked ~ table .a{
+input[name="A"]:checked ~ table .a,
+input[name="B"]:checked ~ table .b,
+input[name="C"]:checked ~ table .c,
+input[name="D"]:checked ~ table .d,
+input[name="E"]:checked ~ table .e,
+input[name="F"]:checked + table .f
+{
     display: table-row;
 }
 
-input[name="B"]:checked ~ table .b{
-    display: table-row;
-}
-
-input[name="C"]:checked ~ table .c{
-    display: table-row;
-}
-
-input[name="D"]:checked ~ table .d{
-    display: table-row;
-}
-
-input[name="E"]:checked ~ table .e{
-    display: table-row;
-}
-
-input[name="F"]:checked + table .f{
-    display: table-row;
-}
-
-div {
-    margin-bottom: -8px;
+.hint {
+    font-style: italic;
+    margin-left: 100px;
+    color: gray;
 }
