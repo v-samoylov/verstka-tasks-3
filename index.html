@@ -100,7 +100,7 @@ aeroflot_full.jpg"
                     <td>3660</td>
                     <td>Аэрофлот</td>
                     <td>
-                        <img 
+                        <img
                             src="http://www.svo.aero/r/238E07D9-752F-4DE4-8DE4-305E823670EC/
 aeroflot_full.jpg"
                             alt="аэрофлот лого">
@@ -235,7 +235,7 @@ aeroflot_full.jpg"
                     <td>13:55</td>
                     <td>A</td>
                     <td>ожидание<br>посадки</td>
-                </tr> 
+                </tr>
                 <tr class="moscow d">
                     <td>вылет</td>
                     <td>8146</td>
@@ -270,20 +270,19 @@ alitalia_big-1.jpg"
             </tbody>
         </table>
         <form method="post">
-            <div>Получите данные о рейсе по SMS</div><br>
+            <div class="form-header">Получите данные о рейсе по SMS</div><br>
             Ваш телефон:
             <input
-                placeholder="+7 (XXX) XXX-XX-XX"
                 type="tel"
-                pattern="^(\+?\s*\d+\s*)?(\(\d+\)|\d+)(\s*\-?\s*\d+){1,}$"
-                maxlength="20"
+                maxlength="11"
                 required><br>
+            <div class="hint">+7 (xxx) xxx-xx-xx</div><br>
             Ваш email:
             <input
-                placeholder="user@example.com"
                 type="email"
                 maxlength="30"
-                required>
+                required><br>
+            <div class="hint">user@example.com</div>
             <button type="submit">Отправить</button>
         </form>
     </body>
