@@ -1,27 +1,32 @@
 
-table {
+table
+{
     border-collapse: collapse;
     font-size: 15px;
     border: 1px solid #bbb;
     overflow: hidden;
 }
 
-th {
+th
+{
     color: #555;
     position: relative;
     padding: 5px;
 }
 
-tbody tr {
+tbody tr
+{
     position: relative;
     display: none;
 }
 
-tbody tr:hover {
+tbody tr:hover
+{
     background-color: #ccc;
 }
 
-tbody tr:nth-child(odd) td:first-child::before {
+tbody tr:nth-child(odd) td:first-child::before
+{
     content: "";
     position: absolute;
     background-color: #eee;
@@ -32,14 +37,16 @@ tbody tr:nth-child(odd) td:first-child::before {
     z-index: -2;
 }
 
-td {
+td
+{
     position: relative;
     text-align: center;
     padding: 5px;
     height: 40px;
 }
 
-td:hover::after {
+td:hover::after
+{
     content: "";
     position: absolute;
     background-color: #ccc;
@@ -50,31 +57,37 @@ td:hover::after {
     z-index: -1;
 }
 
-img {
+img
+{
     width: 100px;
 }
 
-button {
+button
+{
     display: none;
     margin-left: 50px;
     margin-top: 20px;
 }
 
-form {
-    margin-left: 190px;
+form
+{
+    margin-left: 297px;
     margin-top: 30px;
     margin-bottom: 50px;
 }
 
-input[type="tel"]:valid ~ input[type="email"]:valid ~ button {
+input[type="tel"]:valid ~ input[type="email"]:valid ~ button
+{
     display: block;
 }
 
-input[type="text"] {
+input[type="text"]
+{
     margin: 20px;
 }
 
-input[type="email"] {
+input[type="email"]
+{
     margin-left: 21px;
     margin-bottom: 5px;
 }
@@ -99,7 +112,8 @@ input[name="F"]:checked + table .f
     display: table-row;
 }
 
-.hint {
+.hint
+{
     font-style: italic;
     margin-left: 100px;
     color: gray;
